@@ -1,0 +1,66 @@
+$success-color: #34C759
+$error-color: #FA5255
+$focus-color: #404040
+$input-border-color: #C2C2C2
+$input-border-width: 1px
+$input-border-radius: 6px
+$input-transition-duration: 0.4s
+
+form
+  max-width: 500px
+  height: 100%
+  padding: 40px
+  background-color: white
+  border-radius: 20px
+  box-sizing: border-box
+  font-family: 'Inter', sans-serif
+  font-weight: 400
+  color: black
+  display: flex
+  flex-wrap: wrap
+  gap: 10px
+  
+  .input-container, .expires-container, .cvv-container
+    display: flex
+    flex-wrap: wrap
+    gap: 10px
+    
+  .input-container
+    flex: 100%
+    label
+      width: 100%
+    input, select
+      padding: 10px
+      width: 100%
+      border: $input-border-width solid $input-border-color
+      border-radius: $input-border-radius
+      transition: border $input-transition-duration
+      outline: none
+      &:focus
+        border-color: $focus-color
+      &.success
+        border-color: $success-color
+      &.error
+        border-color: $error-color
+  
+  .expires-container
+    flex: 2
+    select
+      flex: 1
+
+  .cvv-container
+    flex: 1
+
+  .submit-btn
+    margin-top: 20px
+    flex: 100%
+    background-color: white
+    padding: 15px
+    outline: none
+    border: $input-border-width solid $input-border-color
+    border-radius: $input-border-radius
+    cursor: pointer
+    transition: background-color $input-transition-duration, color $input-transition-duration
+    &:hover
+      background-color: #1D1D1F
+      color: white
